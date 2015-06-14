@@ -11,7 +11,6 @@ GameObject:
   - 212: {fileID: 21293488}
   - 61: {fileID: 6113166}
   - 114: {fileID: 11414938}
-  - 50: {fileID: 5033244}
   m_Layer: 0
   m_Name: ROOF1
   m_TagString: building-part-roof
@@ -31,21 +30,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!50 &5033244
-Rigidbody2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 177300}
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: .0500000007
-  m_GravityScale: 1
-  m_FixedAngle: 0
-  m_IsKinematic: 1
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
 --- !u!61 &6113166
 BoxCollider2D:
   m_ObjectHideFlags: 1

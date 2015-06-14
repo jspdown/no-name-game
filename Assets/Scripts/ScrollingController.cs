@@ -8,11 +8,11 @@ public class ScrollingController : MonoBehaviour {
 	private Vector3 speedVector;
 
 	void Start () {
-		this.speedVector = new Vector3 (-this.speed, 0, 0);
+		this.speedVector = new Vector2 (-speed, 0);
 	}
 	
 	
 	void Update () {
-		this.transform.Translate (this.speedVector);
+		this.transform.Translate (this.speedVector * Time.deltaTime);
 	}
 }
