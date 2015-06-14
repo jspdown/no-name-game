@@ -10,14 +10,14 @@ GameObject:
   - 4: {fileID: 420776}
   - 212: {fileID: 21270802}
   - 61: {fileID: 6174372}
-  - 61: {fileID: 6181088}
   - 114: {fileID: 11419882}
+  - 50: {fileID: 5098644}
   m_Layer: 0
   m_Name: BASE7
   m_TagString: building-part-base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &420776
 Transform:
@@ -31,6 +31,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5098644
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 153204}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!61 &6174372
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -44,19 +59,6 @@ BoxCollider2D:
   m_Offset: {x: -4.76837158e-07, y: 0}
   serializedVersion: 2
   m_Size: {x: 9.61728382, y: 2.81999993}
---- !u!61 &6181088
-BoxCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 153204}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: .98568821}
-  serializedVersion: 2
-  m_Size: {x: 10.79, y: .848623633}
 --- !u!114 &11419882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -94,7 +96,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -554186689
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d92a5920ca6094c22accec1450eed8b1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 8f58081af564248f8a5dae668050c2c6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

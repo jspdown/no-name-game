@@ -21,6 +21,10 @@ public class CharacterController : MonoBehaviour {
 		}
 	}
 
+	void OnCollisionEnter2D(Collision2D collision) {
+		Debug.Log ("COLLISION");
+	}
+
 	public void move(float speed) {
 		this.transform.Translate (new Vector3 (0, speed, 0));
 	}

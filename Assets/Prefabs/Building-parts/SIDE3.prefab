@@ -11,12 +11,13 @@ GameObject:
   - 212: {fileID: 21290678}
   - 61: {fileID: 6157452}
   - 114: {fileID: 11404162}
+  - 50: {fileID: 5011010}
   m_Layer: 0
   m_Name: SIDE3
   m_TagString: building-part-side
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &494558
 Transform:
@@ -30,6 +31,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!50 &5011010
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 127948}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
 --- !u!61 &6157452
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -80,7 +96,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -554186689
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: f47faf2f06dab4538923d042d3880ebf, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6c02e0bbfbf734c66bdb6beee895b0b2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

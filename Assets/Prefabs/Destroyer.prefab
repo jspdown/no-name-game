@@ -1,61 +1,58 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &173976
+--- !u!1 &149768
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 402938}
-  - 114: {fileID: 11408340}
-  - 114: {fileID: 11432432}
+  - 4: {fileID: 492794}
+  - 61: {fileID: 6196982}
+  - 114: {fileID: 11451544}
   m_Layer: 0
-  m_Name: City
+  m_Name: Destroyer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &402938
+--- !u!4 &492794
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 173976}
+  m_GameObject: {fileID: 149768}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -5.57999992, z: -.769999981}
+  m_LocalPosition: {x: -15.8599997, y: 1.15999985, z: -.75}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!114 &11408340
+--- !u!61 &6196982
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 149768}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: -.430970192, y: -1.22504234}
+  serializedVersion: 2
+  m_Size: {x: 6.7684536, y: 11.4451256}
+--- !u!114 &11451544
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 173976}
+  m_GameObject: {fileID: 149768}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 351da8ac4a7dc446e88a7699138c7c36, type: 3}
+  m_Script: {fileID: 11500000, guid: 7fad790a49fd84d3792d1eb6dca78327, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  citySize: 100
-  building: {fileID: 137348, guid: 500b47243748b434a93b979c456b1126, type: 2}
-  minPos: 2
-  maxPos: 5
---- !u!114 &11432432
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 173976}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b861e29a4383840ec9b77f31a6446779, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: .0500000007
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -65,5 +62,5 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 173976}
+  m_RootGameObject: {fileID: 149768}
   m_IsPrefabParent: 1

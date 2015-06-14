@@ -9,14 +9,15 @@ GameObject:
   m_Component:
   - 4: {fileID: 473246}
   - 212: {fileID: 21239068}
-  - 60: {fileID: 6000862}
   - 114: {fileID: 11413380}
+  - 61: {fileID: 6199416}
+  - 50: {fileID: 5049880}
   m_Layer: 0
   m_Name: BASE1
   m_TagString: building-part-base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &473246
 Transform:
@@ -30,8 +31,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!60 &6000862
-PolygonCollider2D:
+--- !u!50 &5049880
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 111478}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!61 &6199416
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -41,17 +57,8 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: -.0502738357, y: .939443588}
-      - {x: -2.13440847, y: .928331256}
-      - {x: -2.39091635, y: .676530361}
-      - {x: -2.38845921, y: -.680149734}
-      - {x: -2.13321567, y: -.933459103}
-      - {x: 2.1408546, y: -.933952928}
-      - {x: 2.39134455, y: -.699756622}
-      - {x: 2.39123201, y: .685116053}
-      - {x: 2.13820958, y: .940616012}
+  serializedVersion: 2
+  m_Size: {x: 4.78999996, y: 1.84000003}
 --- !u!114 &11413380
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -89,7 +96,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -554186689
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 58b6ff953d9c149eba90799450af36a9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 0e1be4b5711724c41b6eed1b70275ff8, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

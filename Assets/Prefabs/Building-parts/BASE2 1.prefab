@@ -9,14 +9,15 @@ GameObject:
   m_Component:
   - 4: {fileID: 434860}
   - 212: {fileID: 21289854}
-  - 60: {fileID: 6074060}
   - 114: {fileID: 11442830}
+  - 61: {fileID: 6193998}
+  - 50: {fileID: 5060322}
   m_Layer: 0
   m_Name: BASE2 1
   m_TagString: building-part-base
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &434860
 Transform:
@@ -30,8 +31,23 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!60 &6074060
-PolygonCollider2D:
+--- !u!50 &5060322
+Rigidbody2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118362}
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: .0500000007
+  m_GravityScale: 1
+  m_FixedAngle: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+--- !u!61 &6193998
+BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -41,39 +57,8 @@ PolygonCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: 0, y: 0}
-  m_Points:
-    m_Paths:
-    - - {x: 2.36282349, y: -.979952574}
-      - {x: 2.39029336, y: -.807165623}
-      - {x: 2.60904336, y: -.603281379}
-      - {x: 2.6099999, y: -.206369162}
-      - {x: 2.22996974, y: -.21011126}
-      - {x: 2.15686536, y: -.131136179}
-      - {x: 2.12019587, y: .60152936}
-      - {x: 2.37464595, y: .843608856}
-      - {x: 2.26791167, y: .948827505}
-      - {x: 2.27453303, y: 1.22654986}
-      - {x: 2.37896872, y: 1.22721481}
-      - {x: 2.38451886, y: 1.82999992}
-      - {x: 2.13107848, y: 2.08139944}
-      - {x: -2.13737273, y: 2.08184338}
-      - {x: -2.40368629, y: 1.81531763}
-      - {x: -2.40032959, y: 1.2332027}
-      - {x: -2.3374362, y: .995128393}
-      - {x: -2.34146667, y: .829944849}
-      - {x: -2.29015732, y: .796139956}
-      - {x: -1.38190639, y: .805042982}
-      - {x: -1.38042426, y: -.338533521}
-      - {x: -2.25158525, y: -.241215229}
-      - {x: -2.61158514, y: -.240607738}
-      - {x: -2.60841465, y: -.617080808}
-      - {x: -2.42271328, y: -.623060822}
-      - {x: -2.4195807, y: -1.78999996}
-      - {x: -2.12155604, y: -2.08999991}
-      - {x: 2.17000008, y: -2.08999991}
-      - {x: 2.43000007, y: -1.88999999}
-      - {x: 2.44000006, y: -1.87}
-      - {x: 2.40726161, y: -1.3545537}
+  serializedVersion: 2
+  m_Size: {x: 5.21999979, y: 4.11999989}
 --- !u!114 &11442830
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -111,7 +96,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: -554186689
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: a4e47350968ac4fa0b670bdfe94e3fd4, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1516960bea0044955aadf61f6e995a20, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:

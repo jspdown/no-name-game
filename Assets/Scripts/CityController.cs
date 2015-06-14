@@ -1,37 +1,56 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 public class CityController : MonoBehaviour {
 
 	public float citySize;
-	public GameObject building;	
+	public GameObject buildingPrefab;	
 	public float minPos;
 	public float maxPos;
+	public int poolSize;
+
+	private List<GameObject> pool;
+
+	private float currentPosition;
 
 	void Start () {
-		float position = 0.0f;
-		bool done = false;
-		int i = 0;
-
-		while (!done) {
-			position += Random.Range(minPos, maxPos);
-			i++;
-			GameObject go = GameObject.Instantiate(
-				this.building,
-				new Vector3(this.transform.position.x + position, this.transform.position.y, this.transform.position.z),
-				Quaternion.identity
-			) as GameObject;
-
-			go.transform.parent = this.transform;
-			if (position > this.citySize) {
-				done = true;
-			}
-		}
-
+		this.pool = new List<GameObject>();
+		this.currentPosition = 0.0f;
 	}
-	
 
 	void Update () {
-		
+		while (this.pool.Count < this.poolSize) {
+			this.createBuilding();
+		}
 	}
+
+	public void removeBuilding(GameObject building) {
+		this.pool.Remove (building);
+	}
+
+	public void createBuilding() {
+		GameObject 	building;
+		Vector3 	position;
+
+		position = this.transform.position;
+		this.currentPosition += Random.Range (this.minPos, this.maxPos);
+		position.x += this.currentPosition;
+		building = GameObject.Instantiate(this.buildingPrefab, position, Quaternion.identity) as GameObject;
+		building.transform.parent = this.transform;
+
+		this.pool.Add (building);
+	}
+
+
+
+
+	
+	private void probablyCall(float prob, System.Action func) {
+		if (Random.value < prob) {
+			func();
+		}
+	}
+
+
 }
