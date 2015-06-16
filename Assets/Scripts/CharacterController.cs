@@ -15,20 +15,20 @@ public class CharacterController : MonoBehaviour {
 	
 	void Update () {
 		if (Input.GetKey (KeyCode.UpArrow)) {
-			this.move(Vector2.up);
+			this.move (Vector2.up);
 		}
 		if (Input.GetKey (KeyCode.DownArrow)) {
-			this.move(-Vector2.up);
+			this.move (-Vector2.up);
 		}
 		if (Input.GetKey (KeyCode.LeftArrow)) {
-			this.move(-Vector2.right);
+			this.move (-Vector2.right);
 		}
 		if (Input.GetKey (KeyCode.RightArrow)) {
-			this.move(Vector2.right);
+			this.move (Vector2.right);
 		}
 
 		if (Input.GetKey (KeyCode.Space)) {
-			this.machineGun.GetComponent<MachineGunController>().shoot(this.transform.position);
+			this.machineGun.GetComponent<MachineGunController> ().shoot (this.transform.position);
 		}
 	}
 
@@ -37,6 +37,7 @@ public class CharacterController : MonoBehaviour {
 	}
 	
 	void OnCollisionEnter2D(Collision2D collision) {
+		Debug.Log ("COLLIDE");
 		if (collision.gameObject.tag.Contains ("building-part")) {
 			this.die ();
 		}
@@ -45,9 +46,10 @@ public class CharacterController : MonoBehaviour {
 	public void move(Vector2 direction) {
 		this.transform.Translate (Mathf.Cos(Time.deltaTime) * this.speed * direction * Time.deltaTime);
 	}
-
+	
 	public void die() {
-		Application.LoadLevel (Application.loadedLevel);
+		Debug.Log ("DIE");
+		GameObject.Find ("Level").GetComponent<LevelController> ().restart ();
 	}
 
 

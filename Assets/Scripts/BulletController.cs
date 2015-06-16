@@ -6,9 +6,11 @@ public class BulletController : MonoBehaviour {
 	public float speed;
 	public float lifeTime;
 
+	private bool collide;
 	private float dateOfBirth;
 
 	void Start () {	
+		this.collide = false;
 		this.dateOfBirth = Time.time;
 	}
 
@@ -16,18 +18,22 @@ public class BulletController : MonoBehaviour {
 		if (collision.gameObject.tag.Contains ("enemy")) {
 			Debug.Log ("Piou piou! piooouu!");
 		}
-		this.destroy ();
+		
+		if (collision.gameObject.tag != "own-bullet") {
+			this.GetComponent<Animator> ().SetTrigger ("Collide");
+			this.collide = true;
+		}
 	}
 
 	void Update () {
 		if (Time.time >= this.dateOfBirth + this.lifeTime) {
-			this.destroy();
-		} else {
+			destroy();
+		} else if (!this.collide) {
 			this.transform.Translate (Vector2.right * speed * Time.deltaTime);
 		}
 	}
 
-	private void destroy() {
+	public void destroy() {
 		GameObject bulletPool = GameObject.Find ("BulletPool");
 		bulletPool.GetComponent<BulletPoolController> ().removeBullet (this.gameObject);	
 		Destroy (this.gameObject);

@@ -40,8 +40,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 192414, guid: 765f64fba4aff48c7bd698ebf956281c, type: 2}
-  bulletSpeed: 6
-  bulletFrequency: 20
+  bulletSpeed: 3
+  bulletFrequency: 10
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1

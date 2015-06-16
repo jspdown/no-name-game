@@ -20,7 +20,7 @@ public class BulletPoolController : MonoBehaviour {
 		GameObject bullet;
 
 		if (this.pool.Count < this.poolSize) {
-			bullet = GameObject.Instantiate (prefab, position + Vector3.right, Quaternion.identity) as GameObject;
+			bullet = GameObject.Instantiate (prefab, position + new Vector3(1, 0, -1), Quaternion.identity) as GameObject;
 			BulletController bc = bullet.AddComponent<BulletController> ();
 			bc.speed = speed;
 			bc.lifeTime = 10.0f;

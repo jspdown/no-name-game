@@ -7,6 +7,7 @@ TagManager:
   - building-part-base
   - building-part-side
   - building-part-roof
+  - own-bullet
   layers:
   - Default
   - TransparentFX
